@@ -98,7 +98,6 @@ fn build_c_library() -> Result<(), Box<dyn Error>> {
         )
         .include("cc/include")
         .include(llvm_config("--includedir")?)
-        .flag("-Werror")
         .std("c++17")
         .compile("CTableGen");
 
